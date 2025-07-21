@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiFacebookLogin.MainPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource statusbarcolor}"
+                                StatusBarStyle="LightContent"/>
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <Rectangle Fill="{StaticResource BackgroundGradient}" />
+
+        <Ellipse x:Name="BackgroundOrb1" 
+                 WidthRequest="320" HeightRequest="320"
+                 Fill="#3366CCFF" Opacity="0.2"
+                 HorizontalOptions="End" VerticalOptions="Start"
+                 Margin="0,-160,-160,0">
+            
+        </Ellipse>
+
+        <Ellipse x:Name="BackgroundOrb2" 
+                 WidthRequest="320" HeightRequest="320"
+                 Fill="#9933CCFF" Opacity="0.2"
+                 HorizontalOptions="Start" VerticalOptions="End"
+                 Margin="-160,0,0,-160">
+            
+        </Ellipse>
+
+        <Ellipse x:Name="BackgroundOrb3" 
+                 WidthRequest="240" HeightRequest="240"
+                 Fill="#6633FFFF" Opacity="0.2"
+                 HorizontalOptions="Center" VerticalOptions="Center">
+            
+        </Ellipse>
+
+        <ScrollView HorizontalOptions="Center" VerticalOptions="Center" Padding="24">
+            <StackLayout Spacing="0" MaximumWidthRequest="400">
+
+                <Border BackgroundColor="Transparent" 
+                        StrokeThickness="1" 
+                        Stroke="#33FFFFFF"
+                        StrokeShape="RoundRectangle 24"
+                        Padding="32"
+                        Margin="0,0,0,24">
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#1AFFFFFF" Offset="0.0" />
+                            <GradientStop Color="#0DFFFFFF" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,8" Radius="24" Opacity="0.3" />
+                    </Border.Shadow>
+
+                    <StackLayout Spacing="32">
+                        <StackLayout Spacing="24" HorizontalOptions="Center">
+                            <Border BackgroundColor="Transparent"
+                                    StrokeShape="RoundRectangle 16"
+                                    WidthRequest="80" HeightRequest="80"
+                                    HorizontalOptions="Center"
+                                    Rotation="3">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                        <GradientStop Color="#2563eb" Offset="0.0" />
+                                        <GradientStop Color="#4f46e5" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Border.Shadow>
+                                    <Shadow Brush="Black" Offset="0,4" Radius="12" Opacity="0.3" />
+                                </Border.Shadow>
+
+                                <Label Text="f"  
+                                       FontSize="48" 
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                            </Border>
+
+                            <StackLayout Spacing="8" HorizontalOptions="Center">
+                                <Label Text="Welcome Back" 
+                                       FontSize="32" 
+                                       FontAttributes="Bold"
+                                       TextColor="White"
+                                       HorizontalOptions="Center" />
+                                <Label Text="Connect with your social world" 
+                                       FontSize="18" 
+                                       TextColor="#B3FFFFFF"
+                                       HorizontalOptions="Center" />
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Button x:Name="FacebookLoginButton"
+                                Text="Continue with Facebook"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HeightRequest="60"
+                                CornerRadius="16"
+                                BorderWidth="2"
+                                BorderColor="#33FFFFFF"
+                                Clicked="OnFacebookLoginClicked">
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Color="#1877F2" Offset="0.0" />
+                                    <GradientStop Color="#42A5F5" Offset="1.0" />
+                                </LinearGradientBrush>
+                            </Button.Background>
+                            <Button.Shadow>
+                                <Shadow Brush="#4D1877F2" Offset="0,4" Radius="12" Opacity="0.4" />
+                            </Button.Shadow>
+                        </Button>
+
+                        <Border BackgroundColor="Transparent"
+                                StrokeThickness="1"
+                                Stroke="#1AFFFFFF"
+                                StrokeShape="RoundRectangle 0"
+                                Padding="0,24,0,0">
+
+                            <StackLayout Orientation="Horizontal" 
+                                         Spacing="32" 
+                                         HorizontalOptions="Center">
+                                <StackLayout Orientation="Horizontal" Spacing="8">
+                                    <Ellipse WidthRequest="8" HeightRequest="8" 
+                                             Fill="#4ade80" Opacity="0.8">
+                                        
+                                    </Ellipse>
+                                    <Label Text="Secure" FontSize="14" TextColor="#80FFFFFF" 
+                                           VerticalOptions="Center" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="8">
+                                    <Ellipse WidthRequest="8" HeightRequest="8" 
+                                             Fill="#60a5fa" Opacity="0.8">
+                                        
+                                    </Ellipse>
+                                    <Label Text="Fast" FontSize="14" TextColor="#80FFFFFF" 
+                                           VerticalOptions="Center" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="8">
+                                    <Ellipse WidthRequest="8" HeightRequest="8" 
+                                             Fill="#a78bfa" Opacity="0.8">
+                                        
+                                    </Ellipse>
+                                    <Label Text="Private" FontSize="14" TextColor="#80FFFFFF" 
+                                           VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Border>
+                    </StackLayout>
+                </Border>
+
+                <StackLayout HorizontalOptions="Center" Spacing="4">
+                    <Label HorizontalOptions="Center" HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="By continuing, you agree to our " 
+                                      TextColor="#66FFFFFF" FontSize="12" />
+                                <Span Text="Terms of Service" 
+                                      TextColor="#93c5fd" FontSize="12" 
+                                      TextDecorations="Underline" />
+                                <Span Text=" and " 
+                                      TextColor="#66FFFFFF" FontSize="12" />
+                                <Span Text="Privacy Policy" 
+                                      TextColor="#93c5fd" FontSize="12" 
+                                      TextDecorations="Underline" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

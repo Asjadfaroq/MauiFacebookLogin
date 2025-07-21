@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="com.google.firebase.crashlytics.mapping_file_id">none</string>
+	<string name="facebook_app_id">477678941399285</string>
+	<string name="facebook_client_token">836183de13ed012cd24e0a33827c13d1</string>
+	<string name="app_name">MauiFacebookLogin</string>
+</resources>
