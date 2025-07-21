@@ -1,6 +1,8 @@
 # MauiFacebookLogin
 This project demonstrates how to implement Facebook Login in a cross-platform .NET MAUI application for both Android and iOS using WebAuthenticator. It provides a clean and modular approach to authenticating users with Facebook, retrieving access tokens, and handling secure redirects.
 
+![FacebookLogin](https://github.com/user-attachments/assets/917f8c7d-a683-4452-a025-030c909f2472)
+
 ===================================================================
 
 # Facebook Login Setup for .NET MAUI
